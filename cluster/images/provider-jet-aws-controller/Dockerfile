@@ -1,5 +1,9 @@
-FROM BASEIMAGE
-RUN apk --no-cache add ca-certificates bash
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt-get install -y ca-certificates
+RUN apt-get install -y unzip 
+# RUN apk --no-cache add ca-certificates bash
 
 ARG ARCH
 ARG TINI_VERSION
